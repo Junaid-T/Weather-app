@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+#container {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("background.jpg");
+  color: rgb(255, 245, 245);
+}
+
+/*****************************************************/
+/*****************************************************/
+/*HEADER*/
+#header {
+  height: 15%;
+  text-align: center;
+}
+
+#form {
+  height: 50%;
+}
+#search {
+  display: inline-block;
+  height: 60%;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 140%;
+  margin-top: 5px;
+}
+
+#submit {
+  height: 60%;
+  width: 70px;
+  position: relative;
+  bottom: 2px;
+  background-color: rgb(174, 89, 231);
+  color: white;
+  border-radius: 10%;
+  border: none;
+}
+
+#submit:hover {
+  cursor: pointer;
+  background-color: rgb(95, 52, 124);
+}
+
+#errorMessage {
+  color: red;
+  visibility: hidden;
+}
+
+/*****************************************************/
+/*****************************************************/
+/*MAIN*/
+
+#main-content {
+  height: 50%;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+}
+
+#info-container {
+  height: 80%;
+  width: 60%;
+  display: inline-block;
+  margin-top: 4%;
+  margin-left: 2%;
+  overflow: auto;
+  text-align: center;
+  font-size: 200%;
+}
+
+#today {
+  display: inline-block;
+  height: 30%;
+  width: 20%;
+  visibility: hidden;
+}
+
+#humidity,
+#wind {
+  font-size: 70%;
+  display: inline-block;
+  margin: 0 3%;
+}
+
+#icon-main {
+  font-size: 250px;
+  margin-left: 2%;
+}
+
+/*****************************************************/
+/*****************************************************/
+
+/* TOGGLE SWITCH*/
+
+#toggle {
+  height: 30px;
+  width: 60px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 50px;
+  transition: background-color 0.7s;
+}
+
+#toggle.inactive {
+  background-color: lightgreen;
+}
+
+#toggle.active {
+  background-color: lightblue;
+}
+
+#toggle-switch {
+  display: none;
+}
+
+#toggle-round {
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  transition: left 0.7s, background-color 0.7s;
+}
+
+#toggle-round.inactive {
+  background-color: white;
+  left: 5px;
+}
+
+#toggle-round.active {
+  background-color: blue;
+  left: 35px;
+}
+
+/*****************************************************/
+/*****************************************************/
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 1150px) {
+  #icon-main {
+    font-size: 200px;
+  }
+}
+
+@media (max-width: 945px) {
+  #info-container {
+    margin-left: -6%;
+    font-size: 3vw;
+  }
+}
+@media (max-width: 775px) {
+  #info-container {
+    position: relative;
+    right: 10%;
+    top: 5%;
+  }
+  #icon-main {
+    font-size: 170px;
+  }
+}
+@media (max-width: 660px) {
+  #main-content {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #info-container {
+    width: 70%;
+    height: 50%;
+    position: relative;
+    left: 20%;
+    top: -5%;
+    font-size: 24px;
+  }
+  #icon-main {
+    font-size: 200px;
+    position: relative;
+    left: 22%;
+  }
+}

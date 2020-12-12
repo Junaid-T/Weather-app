@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <header id="header">
+        <img href="#" />
+        <form id="form">
+          <input type="search" id="search" placeholder="Enter a city" />
+          <input type="submit" id="submit" />
+          <p id="errorMessage">Could not find city. Please check your spelling</p>
+        </form>
+      </header>
+
+      <div id="main-content">
+        <div id="switch-container"></div>
+        <div id="info-container">
+          <h2 id="today">Today</h2>
+          <div id="toggle" class="inactive" style="visibility: hidden;">
+            <label id="toggle-round" for="toggle-switch" class="inactive" style="visibility: hidden;">
+              <input id="toggle-switch" type="checkbox" checked></input>
+              </label>
+            </div>
+          <p id="current" class="main-content-info"></p>
+          <p id="high" class="main-content-info"></p>
+          <p id="low" class="main-content-info"></p>
+          <p id="humidity"></p>
+          <p id="wind"></p>
+        </div>
+        <ion-icon id="icon-main" name=""></ion-icon>
+      </div>
+    </div>
+    <script type="module" src="view.js"></script>
+    <script type="module" src="model.js"></script>
+    <script type="module" src="controller.js"></script>
+    <!-- MAYBE CHANGE ICON LONCATION TO LOCAL-->
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  </body>
+</html>
