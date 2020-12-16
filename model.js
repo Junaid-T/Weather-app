@@ -1,7 +1,6 @@
+import { API_key } from "./SECRETS.js";
+
 const state = {};
-
-const API_key = "b009a7000303c2e50046353c3fc8b1f1";
-
 const getData = async function (city) {
   try {
     // Fetch the request
